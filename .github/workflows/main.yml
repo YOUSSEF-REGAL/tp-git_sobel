@@ -10,13 +10,14 @@ jobs:
     - name: Setup Node
       uses: actions/checkout@v4
 
-
-      
-    - name: Compilation du programme
-      run: |echo "Début de la compilation"
+    - name: Setup C++ Compiler
       uses: rlalik/setup-cpp-compiler@v1.2
       with:
-    # Compiler to install
-    compiler: # optional, default is gcc-latest
+          compiler: gcc-latest
+
+    - name: Compilation du programme
+      run: |
+          echo "Début de la compilation"
+          g++ main.cpp -o my_program
   
   

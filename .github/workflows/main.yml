@@ -8,12 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/checkout@v4
 
 
       
-    - name: <step2 name>
-      run: |
-        <command1>
-        <command2>
-        <command3>
+    - name: Compilation du programme
+      run: |echo "Début de la compilation"
+      uses: rlalik/setup-cpp-compiler@v1.2
+      with:
+    # Compiler to install
+    compiler: # optional, default is gcc-latest
+  
+  
